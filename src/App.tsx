@@ -1,7 +1,9 @@
+import EmailSubscribe from "./components/EmailSubscribe";
+
 function App() {
   return (
     <div className="bg-teal-400">
-      <h1>Hello, World!</h1>
+      <EmailSubscribe />
     </div>
   );
 }
