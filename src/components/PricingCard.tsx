@@ -57,7 +57,9 @@ const PricingCard = () => {
               <div className="flex justify-center">
                 <a
                   href="#"
-                  className="inline-block px-10 py-3 my-6 text-center border border-violet-600 rounded-lg hover:bg-violet-800 hover:border-violet-800 duration-200"
+                  className={`${
+                    active == index && "bg-violet-600"
+                  } inline-block px-10 py-3 my-6 text-center border border-violet-600 rounded-lg hover:bg-violet-800 hover:border-violet-800 duration-200`}
                 >
                   Purchase
                 </a>
