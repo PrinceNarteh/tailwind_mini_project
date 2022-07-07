@@ -37,13 +37,15 @@ const pricing = [
 const PricingCard = () => {
   const [active, setActive] = useState(1);
 
+  const isActive = (index: number) => index === active;
+
   return (
     <div className="min-h-screen flex justify-center items-center bg-slate-800">
       <div className="flex flex-col my-6 space-y-6 cursor-pointer md:space-y-0 md:space-x-6 md:flex-row md:my-0">
         {pricing.map((price, index) => (
           <div
-            className={`${active == index ? "bg-violet-600" : "bg-slate-700"} ${
-              active == index && "scale-105"
+            className={`${isActive(index) ? "bg-violet-600" : "bg-slate-700"} ${
+              isActive(index) && "scale-105"
             } rounded-xl divide-y divide-slate-700 text-white transform hover:scale-105 duration-300`}
             onClick={() => setActive(index)}
           >
@@ -58,7 +60,7 @@ const PricingCard = () => {
                 <a
                   href="#"
                   className={`${
-                    active == index && "bg-violet-600"
+                    isActive(index) && "bg-violet-600"
                   } inline-block px-10 py-3 my-6 text-center border border-violet-600 rounded-lg hover:bg-violet-800 hover:border-violet-800 duration-200`}
                 >
                   Purchase
